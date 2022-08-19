@@ -320,19 +320,19 @@ img {
 }
 
 .skills__html {
-  width: 95%;
+  width: 60%;
 }
 
 .skills__css {
-  width: 85%;
+  width: 40%;
 }
 
 .skills__js {
-  width: 65%;
+  width: 30%;
 }
 
 .skills__ux {
-  width: 85%;
+  width: 60%;
 }
 
 .skills__img {
@@ -528,3 +528,16 @@ img {
     width: 450px;
   }
 }
+#btncv{
+  background-color: var(--first-color);
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 15px;
+  color: #fff;
+}
+  
+
+  
+
