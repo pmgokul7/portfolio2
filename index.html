@@ -11,6 +11,7 @@
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
         <title>Gokul PM</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     </head>
     <body>
         <!--===== HEADER =====-->
@@ -172,7 +173,7 @@
                 <h2 class="section-title">Contact</h2>
 
                 <div class="contact__container bd-grid">
-                    <form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbwUg2JwWQ3-YUaQDpp29FCY_tT4NFPxIleKPs_dPiXdc1PLg3bBoIzZ1ViLNjgFRBBEmw/exec" class="contact__form">
+                    <form id="submit-form"  action="" class="contact__form">
                         <input type="text"  name="name" placeholder="Name" class="contact__input" required>
                         <input type="email" name="email" placeholder="Email" class="contact__input" required>
                         <textarea name="message" id="" cols="0" rows="10" class="contact__input" required></textarea>
@@ -200,5 +201,29 @@
 
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>
+ <script>
+          
+           
+
+            $("#submit-form").submit((e)=>{
+                e.preventDefault()
+                $.ajax({
+                    url:"https://script.google.com/macros/s/AKfycbwUg2JwWQ3-YUaQDpp29FCY_tT4NFPxIleKPs_dPiXdc1PLg3bBoIzZ1ViLNjgFRBBEmw/exec",
+                    data:$("#submit-form").serialize(),
+                    method:"post",
+                    success:function (response){
+                        alert("Form submitted successfully")
+                        window.location.reload()
+                        //window.location.href="https://google.com"
+                    },
+                    error:function (err){
+                        alert("Something Error")
+        
+                    }
+                })
+            })
+
+
+        </script>
     </body>
 </html>
