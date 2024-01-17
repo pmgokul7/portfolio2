@@ -323,6 +323,10 @@ img {
   width: 60%;
 }
 
+.skills__node {
+  width: 80%;
+}
+
 .skills__css {
   width: 65%;
 }
